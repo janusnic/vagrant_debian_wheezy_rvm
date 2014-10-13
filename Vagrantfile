@@ -14,6 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = 'https://vagrantcloud.com/jhsu802701/boxes/debian-wheezy-rvm/versions/1/providers/virtualbox.box'
   config.vm.hostname = 'vagrant-rvm' # Name of machine in VirtualBox
   config.vm.network :forwarded_port, guest: 3000, host: 3000
+  config.vm.synced_folder "~/vagrant", "/srv/website"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs

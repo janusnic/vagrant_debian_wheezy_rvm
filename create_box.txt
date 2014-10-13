@@ -1,0 +1,70 @@
+SUMMARY
+1.  Install Debian in your virtual machine.
+2.  Configure Debian in your virtual machine.
+3.  Clean up Debian in your virtual machine.
+4.  Create a Vagrant box from your Debian virtual machine, and test it.
+5.  Install RVM in your virtual machine.
+6.  Clean up your virtual machine.
+7.  Create a Vagrant box from your Debian virtual machine, and test it.
+
+INSTALLING DEBIAN
+1.  Go to https://www.debian.org/CD/http-ftp/#stable, select the i386 option, and download the netinstall version of
+Debian Linux.  Make sure that your ISO file has the expected md5sum value.
+2.  Create a new virtual machine in VirtualBox called vagrant-debian-wheezy-rvm.  Set the memory to 512 MB, set the
+disk size to 10 GB, and use the default values for all other parameters you are prompted for.
+3.  In VirtualBox, select the vagrant-debian-wheezy-rvm machine, and go to Settings -> Audio.  Uncheck "Enable Audio".
+4.  In VirtualBox, select the vagrant-debian-wheezy-rvm machine, and go to Settings -> USB.  Uncheck "Enable USB
+Controller".
+Select the "Show At Top Of Screen" option for the toolbar
+5.  In VirtualBox, select the vagrant-debian-wheezy-rvm machine, and go to Settings -> General -> Advanced.  
+Select the "Show At Top Of Screen" option for the toolbar.
+6.  In VirtualBox, select the vagrant-debian-wheezy-rvm machine, and go to Settings -> Storage.  Set the IDE
+controller (the virtual CD/DVD drive) to boot from the Debian Linux ISO file you downloaded.
+7.  In VirtualBox, select the vagrant-debian-wheezy-rvm machine, and click on the Start button to boot up.
+8.  Install Debian in the virtual machine.  Select your language (English for me), your territory (USA for me), and 
+time zone (Central Time for me).  Set the host name as "vagrant-debian-wheezy-rvm".  Set the domain name as 
+"vagrantup.com".  Set the root password, user login, and user password as "vagrant".  Use the default values for all
+other options.
+9.  When the Debian installer gives you the software selection menu, select ONLY the standard system utilities, and 
+unselect all other options.
+10.  After Debian is installed and rebooted, log in when prompted.  Then enter the command "sudo poweroff".
+11.  Once your virtual machine is shut down, save a snapshot of the current state.
+
+CONFIGURING DEBIAN
+1.  Log in to your Debian virtual machine.
+2.  As root, enter the following commands to update and install the necessary packages:
+apt-get update
+apt-get upgrade
+apt-get install -y build-essential module-assistant
+m-a prepare
+apt-get install -y sudo zerofree openssh-server
+3.  As root, set up ssh by entering the following commands:
+mkdir /home/vagrant/.ssh
+cd /home/vagrant/.ssh
+wget https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub
+mv vagrant.pub authorized_keys
+cd -
+chmod 700 /home/vagrant/.ssh
+chown -R vagrant:vagrant /home/vagrant/.ssh
+4.  As root, enter the command "visudo" to edit the sudo configuration.  Add the line 
+"vagrant ALL=(ALL) NOPASSWD: ALL" and save.  When you are back in the command line, enter the command 
+"/etc/init.d/sudo restart".
+
+
+
+INSTALLING RVM
+1.  sudo apt-get install git curl zlib1g-dev subversion bzip2
+2.  sudo apt-get install build-essential openssl libreadline6 libreadline6-dev git-core zlib1g libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison ca-certificates
+3.  sudo apt-get install g++ ssh libpq-dev postgresql libgtkmm-2.4 libnotify-bin dbus
+4.  curl -L get.rvm.io | bash -s stable --rails
+5.  git clone https://github.com/joyent/node.git
+6.  cd node;./configure;make;make test # pseudoRandomBytes error
+7.  cd node; sudo make install
+8.  Save snapshot
+
+TESTING RVM INSTALLATION (from http://elinux.org/RPi_Ruby_on_Rails)
+1.  rails new school
+2.  cd school
+3.  rails g scaffold Pupil name:string form:string
+4.  rake db:migrate
+5.  rails s
