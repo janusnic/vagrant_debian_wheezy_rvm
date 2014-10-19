@@ -15,16 +15,15 @@ disk size to 10 GB, and use the default values for all other parameters you are 
 3.  In VirtualBox, select the vagrant-debian-wheezy-rvm machine, and go to Settings -> Audio.  Uncheck "Enable Audio".
 4.  In VirtualBox, select the vagrant-debian-wheezy-rvm machine, and go to Settings -> USB.  Uncheck "Enable USB
 Controller".
-Select the "Show At Top Of Screen" option for the toolbar
 5.  In VirtualBox, select the vagrant-debian-wheezy-rvm machine, and go to Settings -> General -> Advanced.  
-Select the "Show At Top Of Screen" option for the toolbar.
+Select the "Show At Top Of Screen" option for the toolbar.  Then click on the OK button.
 6.  In VirtualBox, select the vagrant-debian-wheezy-rvm machine, and go to Settings -> Storage.  Set the IDE
 controller (the virtual CD/DVD drive) to boot from the Debian Linux ISO file you downloaded.
 7.  In VirtualBox, select the vagrant-debian-wheezy-rvm machine, and click on the Start button to boot up.
-8.  Install Debian in the virtual machine.  Select your language (English for me), your territory (USA for me), and 
-time zone (Central Time for me).  Set the host name as "vagrant-debian-wheezy-rvm".  Set the domain name as 
-"vagrantup.com".  Set the root password, user login, and user password as "vagrant".  Use the default values for all
-other options.
+8.  Install Debian in the virtual machine.  Select your language (English for me), your territory (USA for me),
+keymap (American English for me), and time zone (Central Time for me).  Set the host name as 
+"vagrant-debian-wheezy-rvm".  Set the domain name as "vagrantup.com".  Set the root password, user login, and user 
+password as "vagrant".  Use the default values for all other options.
 9.  When the Debian installer gives you the software selection menu, select ONLY the standard system utilities, and 
 unselect all other options.
 10.  After Debian is installed and rebooted, log in when prompted.  Then become root and enter the command "poweroff".
@@ -35,8 +34,9 @@ CONFIGURING DEBIAN
 2.  Enter the following commands:
 wget https://raw.githubusercontent.com/jhsu802701/vagrant_prep/master/deb1.sh
 su
-sh deb1.sh
-
+sh deb1.sh # requires your input twice in the first few seconds
+3.  rm deb1.sh
+4.  Power down the virtual machine, and take a snapshot.
 
 2.  As root, enter the following commands to update and install the necessary packages:
 apt-get update
@@ -93,7 +93,7 @@ CLEAN UP VIRTUAL MACHINE
 6.  zerofree /dev/sda1 # this will take a while...
 7.  shutdown -h now
 
-CREATING THE BOX
+CREATING AND TESTING THE BOX
 1.  In the host OS (from this directory), go to the command line and enter 
 "vagrant package --base vagrant-debian-wheezy-rvm" to create the box (package.box).
 2.  Enter "vagrant box add debian-wheezy-rvm package.box" to add the box to your Vagrant repository.
