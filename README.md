@@ -17,9 +17,9 @@ replace your old version of VirtualBox with the latest one.
 10/20/2014
 
 ## Versions of Software used as of the most recent release:
-debian-wheezy-rvm Vagrant base box: 0.0.0
-VirtualBox: 4.3.18
-Vagrant: 1.6.5
+* debian-wheezy-rvm Vagrant base box: 0.0.0
+* VirtualBox: 4.3.18
+* Vagrant: 1.6.5
 
 ## Getting started
 
