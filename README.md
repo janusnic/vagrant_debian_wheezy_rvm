@@ -4,6 +4,17 @@ __We want to make it easy for you to create Ruby on Rails applications.__
 
 One hurdle we have seen for Rails newcomers is installing and configuring Ruby on Rails on their computers.  This tool sets up of a Ruby on Rails development environment.  Follow the steps below. If you have questions, please feel free to [create an issue (really!)](http://github.com/railsmn/railsmn-dev-box/issues).
 
+## WARNING
+File syncing does not work with certain older versions of VirtualBox.  If the file syncing 
+does not work for you, uninstall your current version of Viru
+
+## Date of most recent release
+10/20/2014
+
+## Versions of Software used as of the most recent release:
+debian-wheezy-rvm Vagrant base box: 0.0.0
+VirtualBox: 4.3.18
+Vagrant: 1.6.5
 
 ## Getting started
 
@@ -22,34 +33,14 @@ Install 3 packages (programs).
 
 
 ### Step 2 - Build Vagrant Virtual Machine   
-**Windows Users: Go directly to step 2b**
 
 In the terminal application,  
 
-    git clone git://github.com/railsmn/railsmn-dev-box.git
-    cd railsmn-dev-box
+    git clone https://github.com/jhsu802701/vagrant_debian_wheezy_rvm.git
+    cd vagrant_debian_wheezy_rvm
     vagrant up
 
-#### Step 2b - Windows Users Only:
-If you would like to have access to the open_camp project files *outside* of your Vagrant box (ie: to use your favorite text editor on Windows - like Notepad++ or similar) follow these steps before running the 'vagrant up' command.
-
-1.	Create a folder on your Windows computer (typically in the Desktop or 'My Documents' directory) - your open_camp project will be accessible from here.
-2.	In your GithubUI application, clone the repository available at git://github.com/railsmn/railsmn-dev-box.git - see http://windows.github.com/help.html for more info on how to do this.	
-3.	Once downloaded, open the 'railsmn-dev-box' folder on your computer, using File Explorer.
-4.	Now, go back to the folder you created in Step 1, and copy the [FULL PATH](http://technet.microsoft.com/en-us/magazine/ff678296.aspx)
-5.	Next, we want to edit the 'Vagrantfile' file. Open it with your favorite text editor, and edit the line that reads: ```config.vm.share_folder "open_camp_directory", "/home/vagrant/open_camp", "**Windows Folder Path**"```
-
-	Replace the 'Windows Folder Path' text with the FULL PATH that you copied in Step 4.
-
-	**IMPORTANT:** Windows will, by default, paste something like this ```"C:\Users\Mo\Desktop\open_camp_folder"``` Make sure that you change out the backwards slashes, and replace them with forward slashes. The end result should look something like this:
-	```config.vm.share_folder "open_camp_directory", "/home/vagrant/open_camp", "C:/Users/Mo/Desktop/open_camp_folder"```
-6. 	In your Git Shell (ie: Start -> Applications -> Github -> Git Shell), CD into the directory from Step 2 (ie: Where the ```Vagrantfile``` exists). 
-7.	Run the ```vagrant up``` command.
-* 	More information about this process is available on the [Vagrant project's website](http://docs-v1.vagrantup.com/v1/docs/config/vm/share_folder.html)
-
-### Step 2 (all users) continued
-The above commands,   
-- Download the base Linux image  
+The above commands:
 - Create and start the Vagrant Virtual Machine  
 - Can take anywhere from 3-45 minutes, depending on your machine and internet connection.  
 
@@ -57,8 +48,6 @@ The above commands,
 In the terminal application,  
 
     vagrant ssh    # NOTE: now you have SSH-ed into the Vagrant Virtual Machine (VM)
-
-    vagrant@rails-dev-box:~$
 
 ### Step 4 - Create a Rails app  
 Using the same SSH connection from Step 3,  
