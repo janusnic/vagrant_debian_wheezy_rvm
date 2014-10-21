@@ -24,3 +24,5 @@
 !Vagrantfile
 !.gitignore
 !create_box.txt
+!shared
+!shared/README.txt
