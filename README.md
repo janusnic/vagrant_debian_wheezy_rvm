@@ -53,6 +53,8 @@ The above commands:
 In the terminal application,  
 
     vagrant ssh    # NOTE: now you have SSH-ed into the Vagrant Virtual Machine (VM)
+    
+If you are asked to provide a password, enter "vagrant".
 
 ### Step 4 - Create a Rails app and start the rails server
 Using the same SSH connection from Step 3, enter the following commands:
