@@ -1,12 +1,17 @@
 # A Virtual Machine for Getting Started with Ruby on Rails
 
-__We want to make it easy for you to create Ruby on Rails applications.__
+This repository makes it easy to get started in Ruby on Rails.  It allows you to download, install, boot up, and 
+enter a Vagrant base box equipped with a very recent version of Ruby on Rails on a Debian Stable platform.  The 
+software in the latest Vagrant base box available here will be much more current than the software in most of the 
+other Vagrant base boxes out there.  Furthermore, keeping this Vagrant base box updated will be MUCH easier than 
+keeping most of the other publicly available Vagrant base boxes updated.
 
-One hurdle we have seen for Rails newcomers is installing and configuring Ruby on Rails on their computers.  This tool sets up of a Ruby on Rails development environment.  Follow the steps below. If you have questions, please feel free to [create an issue (really!)](http://github.com/railsmn/railsmn-dev-box/issues).
+## What's In The Box
+RVM, Git, SQLite, PostgreSQL, Chef, Puppet, node.js
 
 ## WARNING
-File syncing does not work with certain older versions of VirtualBox.  If the file syncing 
-does not work for you, uninstall your current version of Viru
+File syncing does not work with certain older versions of VirtualBox.  If the file syncing does not work for you, 
+replace your old version of VirtualBox with the latest one.
 
 ## Date of most recent release
 10/20/2014
@@ -49,50 +54,18 @@ In the terminal application,
 
     vagrant ssh    # NOTE: now you have SSH-ed into the Vagrant Virtual Machine (VM)
 
-### Step 4 - Create a Rails app  
-Using the same SSH connection from Step 3,  
-    
-    rails new open_camp -d postgresql  
-    cd open_camp
-
-
-### Step 5 - Edit the ````database.yml```` file
-Use your text editor and open the   ````open_camp/config/databse.yml````  file.  
-
-Change  ````username````  from  ````open_camp````  to  ````vagrant````.  
-  
-Change  ````encoding````  from  ````unicode````  to  ````SQL_ASCII````.  
-
-Make sure you do this for both the Development and Test databases.  
-
-
-### Step 6 - Start the Rails server
-Using the same SSH connection from Step 4,   
-
+### Step 4 - Create a Rails app and start the rails server
+Using the same SSH connection from Step 3, enter the following commands:
 ```
-rake db:create
+rails new school
+cd school
+rails g scaffold Pupil name:string form:string # rails g = rails generate
+rake db:migrate
+rails s # Start the rails server
 ```
 
-```
-rails server
-```
-
+### Step 5
 Open your browser and go to [localhost:3000](http://localhost:3000).  
-
-
-## What's In The Box
-
-* Git
-* RVM
-* Ruby 2.0.0 (binary RVM install)
-* Bundler
-* SQLite3, MySQL, and Postgres
-* System dependencies for nokogiri, sqlite3, mysql, mysql2, and pg
-* Databases and users needed to run the Active Record test suite
-* Node.js for the asset pipeline
-* Memcached
-
-
 
 ## Virtual Machine Management
 
