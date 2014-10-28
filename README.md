@@ -11,15 +11,8 @@ RVM, Git, SQLite, PostgreSQL, Chef, Puppet, node.js
 
 ## WARNING
 File syncing does not work with certain older versions of VirtualBox.  If the file syncing does not work for you, 
-replace your old version of VirtualBox with the latest one.
-
-## Date of most recent release
-10/20/2014
-
-## Versions of Software used as of the most recent release:
-* debian-wheezy-rvm Vagrant base box: 0.0.0
-* VirtualBox: 4.3.18
-* Vagrant: 1.6.5
+replace your old version of VirtualBox with the latest one.  File syncing works for me in version 4.3.18, but I 
+had problems in version 4.1.18.
 
 ## Getting started
 
@@ -39,7 +32,7 @@ Install 3 packages (programs).
 
 ### Step 2 - Build Vagrant Virtual Machine   
 
-In the terminal application,  
+In the terminal application, enter:
 
     git clone https://github.com/jhsu802701/vagrant_debian_wheezy_rvm.git
     cd vagrant_debian_wheezy_rvm
@@ -124,5 +117,4 @@ Please check the [Vagrant documentation](http://vagrantup.com/v1/docs/index.html
 
 
 ## Credits 
-
-This is a renamed fork of [rails-dev-box](https://github.com/rails/rails-dev-box). Big Thanks to [Xavier Noria](https://github.com/fxn) and other contributors for their efforts. You guys rock. Thanks!
+Thanks to Derek Rockwell for paving the way with his Vagrant setup at https://github.com/railsmn/railsmn-dev-box .
