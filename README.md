@@ -47,7 +47,8 @@ In the terminal application,
 
     vagrant ssh    # NOTE: now you have SSH-ed into the Vagrant Virtual Machine (VM)
     
-If you are asked to provide a password, enter "vagrant".
+If you are asked to provide a password, enter "vagrant".  There should be a README.txt file in the /home/vagrant
+directory, which is the same README.txt file in the shared directory in this repository.
 
 ### Step 4 - Create a Rails app and start the rails server
 Using the same SSH connection from Step 3, enter the following commands:
@@ -60,7 +61,7 @@ rails s # Start the rails server
 ```
 
 ### Step 5
-Open your browser and go to [localhost:3000](http://localhost:3000).  
+Open your browser and go to [localhost:3000/pupils](http://localhost:3000/pupils).  The school app should appear.
 
 ## Virtual Machine Management
 
