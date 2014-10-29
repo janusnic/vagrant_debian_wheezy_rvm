@@ -36,7 +36,7 @@ Install 3 packages (programs).
 
 ### Step 2 - Build Vagrant Virtual Machine   
 
-In the terminal application,  
+In the terminal application, enter:
 
     git clone https://github.com/jhsu802701/vagrant_debian_wheezy_rvm.git
     cd vagrant_debian_wheezy_rvm
@@ -51,7 +51,8 @@ In the terminal application,
 
     vagrant ssh    # NOTE: now you have SSH-ed into the Vagrant Virtual Machine (VM)
     
-If you are asked to provide a password, enter "vagrant".
+If you are asked to provide a password, enter "vagrant".  There should be a README.txt file in the /home/vagrant
+directory, which is the same README.txt file in the shared directory in this repository.
 
 ### Step 4 - Create a Rails app and start the rails server
 Using the same SSH connection from Step 3, enter the following commands:
@@ -64,7 +65,7 @@ rails s # Start the rails server
 ```
 
 ### Step 5
-Open your browser and go to [localhost:3000](http://localhost:3000).  
+Open your browser and go to [localhost:3000/pupils](http://localhost:3000/pupils).  The school app should appear.
 
 ## Virtual Machine Management
 
@@ -121,5 +122,4 @@ Please check the [Vagrant documentation](http://vagrantup.com/v1/docs/index.html
 
 
 ## Credits 
-
-This is a renamed fork of [rails-dev-box](https://github.com/rails/rails-dev-box). Big Thanks to [Xavier Noria](https://github.com/fxn) and other contributors for their efforts. You guys rock. Thanks!
+Thanks to Derek Rockwell for paving the way with his Vagrant setup at https://github.com/railsmn/railsmn-dev-box .
