@@ -11,15 +11,12 @@ RVM, Git, SQLite, PostgreSQL, Chef, Puppet, node.js
 
 ## WARNING
 File syncing does not work with certain older versions of VirtualBox.  If the file syncing does not work for you, 
-replace your old version of VirtualBox with the latest one.
+replace your old version of VirtualBox with the latest one.  File syncing works in VirtualBox 4.3.18 but not in 
+VirtualBox 4.1.18.
 
-## Date of most recent release
-10/20/2014
-
-## Versions of Software used as of the most recent release:
-* debian-wheezy-rvm Vagrant base box: 0.0.0
-* VirtualBox: 4.3.18
-* Vagrant: 1.6.5
+## Changelog
+Go to https://github.com/jhsu802701/packer-debian-wheezy-rvm/blob/master/changelog.txt for the list of changes in
+each version of the debian-wheezy-rvm Vagrant box.
 
 ## Getting started
 
