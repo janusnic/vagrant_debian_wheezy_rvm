@@ -25,6 +25,7 @@
 !.gitignore
 !create_box.txt
 !shared
-!shared/README.txt
+!shared/README-host.txt
+!shared/test_rvm.sh
 !FAQ.txt
 !install_new_box.sh
