@@ -1,0 +1,7 @@
+CHANGELOG FOR THE jhsu802701/debian-wheezy-rvm VAGRANT BOX
+
+0.1.0 (released 11-2-2014)
+Time stamp: 2014_1102_1253
+Now based on a very minimal Debian Packer script (ror.sh at 
+https://github.com/jhsu802701/packer-debian-wheezy)
+The test_rvm.sh script now provided in this Vagrant setup confirms that RVM is activated and works.

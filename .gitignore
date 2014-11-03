@@ -21,7 +21,7 @@
 # do not ignore these files/folders, IE they should be in git.
 #
 !.gitignore
-!.changelog.txt
+!changelog.txt
 !FAQ.txt
 !install_new_box.sh
 !README.md
