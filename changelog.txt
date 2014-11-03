@@ -5,3 +5,5 @@ Time stamp: 2014_1102_1253
 Now based on a very minimal Debian Packer script (ror.sh at 
 https://github.com/jhsu802701/packer-debian-wheezy)
 The test_rvm.sh script now provided in this Vagrant setup confirms that RVM is activated and works.
+Virtual machine now includes a time stamp at /home/vagrant/timestamp.txt, which will be listed here in every new 
+release.
