@@ -20,12 +20,12 @@
 
 # do not ignore these files/folders, IE they should be in git.
 #
+!.gitignore
+!.changelog.txt
+!FAQ.txt
+!install_new_box.sh
 !README.md
 !Vagrantfile
-!.gitignore
-!create_box.txt
 !shared
 !shared/README-host.txt
 !shared/test_rvm.sh
-!FAQ.txt
-!install_new_box.sh

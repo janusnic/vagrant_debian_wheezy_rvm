@@ -14,10 +14,6 @@ File syncing does not work with certain older versions of VirtualBox.  If the fi
 replace your old version of VirtualBox with the latest one.  File syncing works in VirtualBox 4.3.18 but not in 
 VirtualBox 4.1.18.
 
-## Changelog
-Go to https://github.com/jhsu802701/packer-debian-wheezy-rvm/blob/master/changelog.txt for the list of changes in
-each version of the debian-wheezy-rvm Vagrant box.
-
 ## Getting started
 
 ### Step 1 - Install stuff  
@@ -51,21 +47,20 @@ In the terminal application,
 
     vagrant ssh    # NOTE: now you have SSH-ed into the Vagrant Virtual Machine (VM)
     
-If you are asked to provide a password, enter "vagrant".  There should be a README.txt file in the /home/vagrant
-directory, which is the same README.txt file in the shared directory in this repository.
+If you are asked to provide a password, enter "vagrant".  There should be a README-host.txt file in the 
+/home/vagrant/shared directory, which is the same README-host.txt file in the shared directory in this repository.  
+The purpose of this file is to confirm that file syncing works.
 
-### Step 4 - Create a Rails app and start the rails server
-Using the same SSH connection from Step 3, enter the following commands:
-```
-rails new school
-cd school
-rails g scaffold Pupil name:string form:string # rails g = rails generate
-rake db:migrate
-rails s # Start the rails server
-```
+### Step 4 - Test the RVM installation.
+Using the same SSH connection from Step 3, cd your way into the /home/vagrant/shared directory, and run the 
+test_rvm.sh script with the command "sh test_rvm.sh".  (This installs the copy_rails_tutorial Ruby gem, which then 
+copies an old Rails tutorial sample app.)  Then cd your way into the root directory of the sample app and enter 
+the command "sh setup.sh" to set up the app.  This confirms that RVM works in this virtual machine.
 
 ### Step 5
-Open your browser and go to [localhost:3000/pupils](http://localhost:3000/pupils).  The school app should appear.
+Using the same SSH connection from Steps 3-4, go to the root directory of the sample app within 
+/home/vagrant/shared and enter the command "rails server".  Then open your browser on your host machine, and go to 
+[localhost:3000](http://localhost:3000).  The Rails Tutorial Sample App should appear.
 
 ## Virtual Machine Management
 
