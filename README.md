@@ -51,14 +51,12 @@ If you are asked to provide a password, enter "vagrant".  There should be a READ
 /home/vagrant/shared directory, which is the same README-host.txt file in the shared directory in this repository.  
 The purpose of this file is to confirm that file syncing works.
 
-### Step 4 - Test the RVM installation.
-Using the same SSH connection from Step 3, cd your way into the /home/vagrant/shared directory, and run the 
+### Step 4 - (OPTIONAL) Test the RVM installation.
+4A.  Using the same SSH connection from Step 3, cd your way into the /home/vagrant/shared directory, and run the 
 test_rvm.sh script with the command "sh test_rvm.sh".  (This installs the copy_rails_tutorial Ruby gem, which then 
-copies an old Rails tutorial sample app.)  Then cd your way into the root directory of the sample app and enter 
-the command "sh setup.sh" to set up the app.  This confirms that RVM works in this virtual machine.
-
-### Step 5
-Using the same SSH connection from Steps 3-4, go to the root directory of the sample app within 
+copies an old Rails tutorial sample app.)  Then follow the instructions for completing the app setup.
+<br>
+4B.  Go to the root directory of the sample app within 
 /home/vagrant/shared and enter the command "rails server".  Then open your browser on your host machine, and go to 
 [localhost:3000](http://localhost:3000).  The Rails Tutorial Sample App should appear.
 
