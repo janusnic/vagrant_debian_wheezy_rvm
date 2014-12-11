@@ -60,7 +60,8 @@ http://elinux.org/RPi_Ruby_on_Rails .)
 
 ### Step 5
 When the script in Step 4 has finished its work, open your browser on your host machine, and go to 
-[localhost:3000/pupils](http://localhost:3000/pupiles).  The School App should appear.
+[localhost:3000/pupils](http://localhost:3000/pupils).  The School App should appear.
+
 
 ## Virtual Machine Management
 
