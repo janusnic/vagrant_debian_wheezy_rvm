@@ -53,14 +53,14 @@ The purpose of this file is to confirm that file syncing works.
 
 ### Step 4 - Test the RVM installation.
 Using the same SSH connection from Step 3, cd your way into the /home/vagrant/shared directory, and run the 
-test_rvm.sh script with the command "sh test_rvm.sh".  (This installs the copy_rails_tutorial Ruby gem, which then 
-copies an old Rails tutorial sample app.)  Then cd your way into the root directory of the sample app and enter 
-the command "sh setup.sh" to set up the app.  This confirms that RVM works in this virtual machine.
+test_rvm.sh script with the command "sh test_rvm.sh".  NOTE: This command will take several minutes to complete.  
+At its conclusion, you will see a message ending in "Ctrl-C to shutdown server".  Step 5 will not work until this 
+script reaches this point.  (This test script creates the generic Rails app from 
+http://elinux.org/RPi_Ruby_on_Rails .)
 
 ### Step 5
-Using the same SSH connection from Steps 3-4, go to the root directory of the sample app within 
-/home/vagrant/shared and enter the command "rails server".  Then open your browser on your host machine, and go to 
-[localhost:3000](http://localhost:3000).  The Rails Tutorial Sample App should appear.
+When the script in Step 4 has finished its work, open your browser on your host machine, and go to 
+[localhost:3000/pupils](http://localhost:3000/pupiles).  The School App should appear.
 
 ## Virtual Machine Management
 
