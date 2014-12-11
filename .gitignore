@@ -24,8 +24,12 @@
 !changelog.txt
 !FAQ.txt
 !install_new_box.sh
+!login.sh
+!reboot.sh
+!rebuild.sh
 !README.md
 !Vagrantfile
 !shared
+!shared/info.sh
 !shared/README-host.txt
 !shared/test_rvm.sh

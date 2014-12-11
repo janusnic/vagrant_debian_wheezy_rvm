@@ -1,10 +1,7 @@
 #!/bin/bash
 
 # Just making sure Ruby, Rails, and Node are working as expected.
-rvm -v
-ruby -v
-rails -v
-node -v
+sh /home/vagrant/shared/info.sh
 
 # Due to a bug, installing Spring causes Ruby on Rails to freeze during 
 # the "bundle install" process.  Therefore, we are skipping this step so 
