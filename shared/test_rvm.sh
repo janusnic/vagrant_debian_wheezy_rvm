@@ -11,6 +11,9 @@ sh /home/vagrant/shared/info.sh
 cd /home/vagrant/shared && rails new school --skip-spring
 cd /home/vagrant/shared/school && rails g scaffold Pupil name:string form:string
 cd /home/vagrant/shared/school && rake db:migrate
-echo "Open your web browser to the following URL:"
+echo "**********************"
+echo "OPEN YOUR WEB BROWSER."
+echo "GO TO THE FOLLOWING URL:"
 echo "http://localhost:3000/pupils"
+echo "****************************"
 cd /home/vagrant/shared/school && rails s
