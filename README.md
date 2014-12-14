@@ -57,14 +57,14 @@ The "vagrant ssh" command logs you into the Vagrant box.  If you are asked to pr
 There should be a README-host.txt file in the /home/vagrant/shared directory, which is the same README-host.txt 
 file in the shared directory in this repository.  The purpose of this file is to confirm that file syncing works.
 
-### Step 4 - Test the RVM installation.
+### Step 4 - Test the RVM Installation
 Using the same SSH connection from Step 3, cd your way into the /home/vagrant/shared directory in your virtual 
 machine, and run the test_rvm.sh script with the command "sh test_rvm.sh".  NOTE: This command will take a few 
 minutes to complete.  At its conclusion, you will see a message ending in "Ctrl-C to shutdown server".  Step 5 
 will not work until this script reaches this point.  (This test script creates the generic Rails app from 
 http://elinux.org/RPi_Ruby_on_Rails .)
 
-### Step 5
+### Step 5 - View the Test Application
 When the script in Step 4 has finished its work, open your browser on your host machine, and go to 
 [localhost:3000/pupils](http://localhost:3000/pupils).  The School App should appear.
 
