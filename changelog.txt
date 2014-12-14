@@ -1,17 +1,37 @@
 CHANGELOG FOR THE jhsu802701/debian-wheezy-rvm VAGRANT BOX
 
+===========================
 0.1.1 (released 12-12-2014)
-Now using NVM to get node.js instead of installing node.js directly
+
+Now using NVM (Node Version Manager) to install node.js
+
 Timestamp: 2014_1211_2050
+
 rvm 1.26.4 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+
 ruby 2.1.5p273 (2014-11-13 revision 48405) [i686-linux]
+
 Rails 4.1.8
-Python 2.7.3
-Version of Puppet: 3.7.3
-Chef: 12.0.1
+
 NVM: 0.20.0
+
 node.js: v0.10.33
 
+Python 2.7.3
+
+Version of Puppet: 3.7.3
+
+Chef: 12.0.1
+
+Redis server version 2.4.14 (00000000:0)
+
+Version of SQLite:
+3.7.13 2012-06-11 02:05:22 f5b5a13f7394dc143aa136f1d4faba6839eaa6dc
+
+psql (PostgreSQL) 9.1.14
+contains support for command-line editing
+
+==========================
 0.1.0 (released 11-2-2014)
 Time stamp: 2014_1102_1253
 Now based on a very minimal Debian Packer script (ror.sh at 
