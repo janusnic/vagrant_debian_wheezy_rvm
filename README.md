@@ -16,28 +16,30 @@ VirtualBox 4.1.18.
 
 ## Getting started
 
-### Step 1 - Install VirtualBox
-Go to [VirtualBox](https://www.virtualbox.org), click on Downloads, and get the appropriate platform package.
-If your host OS is Debian Linux, Ubuntu Linux, or a derivative of either distro, cd your way into the directory 
-where your downloaded VirtualBox package is located, and enter the command "dpkg -i virtualbox*deb."  If you choose 
-to use your Linux distro's normal package manager to install VirtualBox, PLEASE check the version number.  As 
-mentioned before, file syncing does not work with certain older versions of VirtualBox (such as 4.1.18) but does 
-work with the newer versions (such as 4.3.18 and 4.3.20).
+### Step 1 - Install Git (Version Control)
+If your host OS is Debian Linux, Ubuntu Linux, or one of their derivatives, the shell command is "apt-get install 
+git".  If your host OS is OS X or Windows, go to the [Git](http://git-scm.com) web site, click on Downloads, choose 
+the appropriate Operating System specific package to download, and follow the normal procedure for installing 
+software.
 
-### Step 2 - Install Git and Vagrant
-Install 2 packages (programs).  If your host OS is Debian Linux, Ubuntu Linux, or one of their derivatives, the 
-shell command is "apt-get install git vagrant".  If your host OS is OS X or Windows, download Git and Vagrant from 
-the URLs below and follow your normal procedure for installing packages.
+### Step 2 - Install VirtualBox
+Go to the [VirtualBox](https://www.virtualbox.org) web site, click on Downloads, and get the appropriate package for
+your host OS.  If your host OS is Debian Linux, Ubuntu Linux, or a derivative of either distro, cd your way into the 
+directory where your downloaded VirtualBox package is located, and enter the command "dpkg -i virtualbox*deb."  If 
+your host OS is OS X or Windows, follow the normal procedure for installing software.  WARNING: File syncing does 
+not work with certain older versions of VirtualBox (such as 4.1.18) but does work with the newer versions (such as 
+4.3.18 and 4.3.20).  Your Linux distro's normal software repository may have one of those problematic older 
+versions of VirtualBox.
 
-* [Git](http://git-scm.com/) - [downloads page](http://git-scm.com/downloads)  
-  + choose Operating System specific package  
+### Step 3 - Install Vagrant
+Go to the [Vagrant](http://vagrantup.com) web site, click on Downloads, and get the appropriate package for your 
+host OS.  If your host OS is Debian Linux, Ubuntu Linux, or a derivative of either distro, cd your way into the 
+directory where your downloaded VirtualBox package is located, and enter the command "dpkg -i vagrant*deb."  If 
+your host OS is OS X or Windows, follow the normal procedure for installing packages.  WARNING: The configuration 
+file in this repository is NOT compatible with Vagrant 1.0.x.  Your Linux distro's normal software repository may 
+have one of those incompatible older versions of Vagrant.
 
-
-* [Vagrant](http://vagrantup.com) - [downloads page](http://downloads.vagrantup.com/)  
-  + click on latest edition  
-  + choose Operating specific package  
-
-### Step 3 - Build, Boot Up, and Enter The Virtual Machine
+### Step 4 - Build, Boot Up, and Enter The Virtual Machine
 
 In the terminal application, enter:
 
@@ -57,14 +59,14 @@ The "vagrant ssh" command logs you into the Vagrant box.  If you are asked to pr
 There should be a README-host.txt file in the /home/vagrant/shared directory, which is the same README-host.txt 
 file in the shared directory in this repository.  The purpose of this file is to confirm that file syncing works.
 
-### Step 4 - Test the RVM Installation
+### Step 5 - Test the RVM Installation
 Using the same SSH connection from Step 3, cd your way into the /home/vagrant/shared directory in your virtual 
 machine, and run the test_rvm.sh script with the command "sh test_rvm.sh".  NOTE: This command will take a few 
 minutes to complete.  At its conclusion, you will see a message ending in "Ctrl-C to shutdown server".  Step 5 
 will not work until this script reaches this point.  (This test script creates the generic Rails app from 
 http://elinux.org/RPi_Ruby_on_Rails .)
 
-### Step 5 - View the Test Application
+### Step 6 - View the Test Application
 When the script in Step 4 has finished its work, open your browser on your host machine, and go to 
 [localhost:3000/pupils](http://localhost:3000/pupils).  The School App should appear.
 
