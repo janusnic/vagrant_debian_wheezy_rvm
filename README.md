@@ -7,7 +7,7 @@ other Vagrant base boxes out there.  Furthermore, keeping this Vagrant base box 
 keeping most of the other publicly available Vagrant base boxes updated.
 
 ## What's In The Box
-RVM, Git, SQLite, PostgreSQL, Chef, Puppet, node.js
+RVM, NVM, Git, SQLite, PostgreSQL, Chef, Puppet, Redis
 
 ## WARNING
 File syncing does not work with certain older versions of VirtualBox.  If the file syncing does not work for you, 
