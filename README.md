@@ -126,11 +126,11 @@ To completely delete virtual machine,
 
     vagrant destroy   # DANGER: all is gone
     
-To delete AND rebuild the virtual machine,
+To delete, rebuild, and log back into the virtual machine,
 
     # From your host OS
     
-    sh rebuild.sh
+    sh rebuild.sh # Executes "vagrant halt", "vagrant destroy", "vagrant up", and "vagrant ssh"
 
 Please check the [Vagrant documentation](http://vagrantup.com/v1/docs/index.html) for more information on Vagrant.
 
