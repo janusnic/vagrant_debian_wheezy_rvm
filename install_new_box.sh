@@ -10,9 +10,20 @@ if [ ! $( id -u ) -ne 0 ]; then
   exit 2
 fi 
 
-vagrant halt;
-vagrant destroy;
+echo "------------"
+echo "vagrant halt"
+vagrant halt
+
+echo "---------------"
+echo "vagrant destroy"
+vagrant destroy
+
+echo "------------------------------------"
+echo "vagrant box remove debian-wheezy-rvm"
 vagrant box remove debian-wheezy-rvm;
+
+echo "-------------------------------------------------------"
+echo "vagrant box add debian-wheezy-rvm debian-wheezy-rvm.box"
 vagrant box add debian-wheezy-rvm debian-wheezy-rvm.box;
-vagrant up;
-vagrant ssh;
+
+sh login.sh
