@@ -35,4 +35,4 @@
 !shared/test_rvm.sh
 !shared/update_linux.sh
 !shared/update_rvm.sh
-!shared/update_ruby.sh
+!shared/update_ror.sh
