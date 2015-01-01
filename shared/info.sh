@@ -20,8 +20,8 @@ VERSION_NVM="$(nvm --version)"
 echo "NVM: ${VERSION_NVM}"
 
 echo
-VERSION_NODE="$(node -v)"
-echo "node.js: ${VERSION_NODE}"
+echo "Version of node.js:"
+nvm list
 
 echo
 python --version
