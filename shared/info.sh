@@ -10,8 +10,7 @@ echo "Timestamp: ${TIME_STAMP}"
 echo
 rvm -v
 
-echo
-ruby -v
+rvm list rubies
 
 echo
 rails -v
