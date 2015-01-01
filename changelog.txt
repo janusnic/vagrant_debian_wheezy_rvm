@@ -9,7 +9,15 @@ Timestamp: 2014_1211_2050
 
 rvm 1.26.4 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
 
-ruby 2.1.5p273 (2014-11-13 revision 48405) [i686-linux]
+rvm rubies
+
+   ruby-2.0.0-p598 [ i686 ]
+=* ruby-2.1.5 [ i686 ]
+
+# => - current
+# =* - current && default
+#  * - default
+
 
 Rails 4.1.8
 
@@ -30,6 +38,7 @@ Version of SQLite:
 
 psql (PostgreSQL) 9.1.14
 contains support for command-line editing
+
 
 ==========================
 0.1.0 (released 11-2-2014)
