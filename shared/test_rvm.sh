@@ -16,4 +16,4 @@ echo "OPEN YOUR WEB BROWSER."
 echo "GO TO THE FOLLOWING URL:"
 echo "http://localhost:3000/pupils"
 echo "****************************"
-cd /home/vagrant/shared/school && rails s
+cd /home/vagrant/shared/school && rails s -b 0.0.0.0
