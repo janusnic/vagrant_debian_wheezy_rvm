@@ -15,7 +15,7 @@ replace your old version of VirtualBox with the latest one.  File syncing works 
 VirtualBox 4.1.18.
 
 ## WARNING 2
-When you start the Rails server from an app in your Vagrant box, enter the command "rails s -b 0.0.0.0".  The 
+When you start the Rails 4.2 server from an app in your Vagrant box, enter the command "rails s -b 0.0.0.0".  The 
 "-b 0.0.0.0" is ESSENTIAL for viewing your app from the web browser on your host machine.  If you simply enter 
 "rails s" or "rails server", you will NOT be able to view your app from the web browser on your host machine.
 
