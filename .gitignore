@@ -28,6 +28,7 @@
 !reboot.sh
 !rebuild.sh
 !README.md
+!update_base.sh
 !Vagrantfile
 !shared
 !shared/info.sh

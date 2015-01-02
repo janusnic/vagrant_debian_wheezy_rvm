@@ -4,6 +4,6 @@ echo "----------"
 echo "vagrant up"
 vagrant up
 
-echo "----------"
+echo "-----------"
 echo "vagrant ssh"
 vagrant ssh
