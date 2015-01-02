@@ -33,6 +33,7 @@
 !shared/info.sh
 !shared/README-host.txt
 !shared/test_rvm.sh
+!shared/update_all.sh
 !shared/update_linux.sh
 !shared/update_node.sh
 !shared/update_ror.sh
