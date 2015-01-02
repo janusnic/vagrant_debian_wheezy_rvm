@@ -7,12 +7,17 @@ other Vagrant base boxes out there.  Furthermore, keeping this Vagrant base box 
 keeping most of the other publicly available Vagrant base boxes updated.
 
 ## What's In The Box
-RVM, NVM, Git, SQLite, PostgreSQL, Chef, Puppet, Redis
+RVM, Ruby, Rails, NVM, Python, node.js, Git, SQLite, PostgreSQL, Chef, Puppet, Redis
 
-## WARNING
+## WARNING 1
 File syncing does not work with certain older versions of VirtualBox.  If the file syncing does not work for you, 
 replace your old version of VirtualBox with the latest one.  File syncing works in VirtualBox 4.3.18 but not in 
 VirtualBox 4.1.18.
+
+## WARNING 2
+When you start the Rails server from an app in your Vagrant box, enter the command "rails s -b 0.0.0.0".  The 
+"-b 0.0.0.0" is ESSENTIAL for viewing your app from the web browser on your host machine.  If you simply enter 
+"rails s" or "rails server", you will NOT be able to view your app from the web browser on your host machine.
 
 ## Getting started
 
