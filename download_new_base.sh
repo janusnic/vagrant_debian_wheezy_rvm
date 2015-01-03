@@ -10,6 +10,8 @@ if [ ! $( id -u ) -ne 0 ]; then
   exit 2
 fi 
 
+git pull
+
 echo "------------"
 echo "vagrant halt"
 vagrant halt
