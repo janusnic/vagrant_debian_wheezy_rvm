@@ -19,6 +19,14 @@ When you start the Rails 4.2 server from an app in your Vagrant box, enter the c
 "-b 0.0.0.0" is ESSENTIAL for viewing your app from the web browser on your host machine.  If you simply enter 
 "rails s" or "rails server", you will NOT be able to view your app from the web browser on your host machine.
 
+## WARNING 3
+You should edit your Rails project source code with the Nano editor from WITHIN the Vagrant box rather than from 
+the host machine.  (Keep in mind that you can still cut and paste text between your Vagrant box and your host 
+system.)  The Guard tool responds quickly to your changes in the source code when you make them from inside the 
+Vagrant box.  Guard responds very slowly to your changes in the source code when you make them from your host 
+machine.  The bottleneck in the process is not with Guard but with the slow speed of file-syncing a large number of 
+files from the host machine to the guest machine.
+
 ## Getting started
 
 ### Step 1 - Install Git (Version Control)
