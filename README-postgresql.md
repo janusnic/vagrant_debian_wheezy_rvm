@@ -13,4 +13,16 @@ export LC_ALL=en_US.UTF-8
 5.  Enter "exit" to disconnect from the Vagrant box, and enter "vagrant ssh" to re-enter.
 6.  Enter "sudo pg_dropcluster 9.1 main --stop".
 7.  Enter "sudo pg_createcluster 9.1 main --start"
-8.  Enter "sudo -u postgres psql -l" to see the encodin, which should now be corrected.
+8.  Enter "sudo -u postgres psql -l" to see the encoding, which should now be corrected.
+
+CREATE A BASIC POSTGRESQL APP
+(From https://github.com/a2labs/vagrant-rails/blob/master/setup.sh)
+
+1.  Enter the following command:<br>
+sudo -u postgres psql -c"CREATE ROLE rails_user WITH LOGIN CREATEDB SUPERUSER PASSWORD 'password1'"
+2.  Enter the command "rails new MYAPPNAME --database=postgresql"
+3.  In the "default: &default" section, enter the following two lines:
+username: rails_user
+password: password1
+4.  Enter the command "cd MYAPPNAME; rake db:create db:migrate".
+5.  Enter the command "rails s -b 0.0.0.0".
