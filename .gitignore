@@ -29,6 +29,7 @@
 !reboot.sh
 !rebuild.sh
 !README.md
+!README-postgresql.md
 !README-update_box.md
 !update_base.sh
 !Vagrantfile
