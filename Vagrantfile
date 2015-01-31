@@ -6,6 +6,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = 'http://downloads.sourceforge.net/project/vagrant-debian-wheezy-rvm/debian-wheezy-rvm-2014_01_02.box?r=&ts=1420249033&use_mirror=hivelocity'
   config.vm.hostname = 'vagrant-rvm' # Name of machine in VirtualBox
   config.vm.network :forwarded_port, guest: 3000, host: 3000
-  config.vm.network :forwarded_port, guest: 5432, host: 5432
+  config.vm.network :forwarded_port, guest: 5432, host: 15432
   config.vm.synced_folder "shared", "/home/vagrant/shared"
 end

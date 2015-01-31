@@ -16,13 +16,19 @@ export LC_ALL=en_US.UTF-8
 8.  Enter "sudo -u postgres psql -l" to see the encoding, which should now be corrected.
 
 CREATE A BASIC POSTGRESQL APP
-(From https://github.com/a2labs/vagrant-rails/blob/master/setup.sh)
+(From https://github.com/a2labs/vagrant-rails/blob/master/setup.sh and 
+http://blog.crowdint.com/2011/08/11/postgresql-in-vagrant.html)
 
-1.  Enter the following command:<br>
+1.  Enter the command "sudo apt-get install postgresql postgresql-contrib postgresql-server-dev-9.1"
+2.  Enter the following command:<br>
 sudo -u postgres psql -c"CREATE ROLE rails_user WITH LOGIN CREATEDB SUPERUSER PASSWORD 'password1'"
-2.  Enter the command "rails new MYAPPNAME --database=postgresql"
-3.  In the "default: &default" section, enter the following two lines:
+3.  Enter "sudo nano /etc/postgresql/9.1/main/pg_hba.conf".  Change instances of "peer" to "md5".  
+
+
+4.  Enter "sudo service postgresql restart"
+5.  Enter the command "rails new MYAPPNAME --database=postgresql"
+6.  In the "default: &default" section of config/database.yml, enter the following two lines:
 username: rails_user
 password: password1
-4.  Enter the command "cd MYAPPNAME; rake db:create db:migrate".
-5.  Enter the command "rails s -b 0.0.0.0".
+7.  Enter the command "cd MYAPPNAME;rails g scaffold Pupil name:string form:string; rake db:create db:migrate".
+8.  Enter the command "rails s -b 0.0.0.0".
