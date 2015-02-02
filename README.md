@@ -74,7 +74,7 @@ file in the shared directory in this repository.  The purpose of this file is to
 
 ### Step 5 - Test the RVM Installation
 Using the same SSH connection from Step 3, cd your way into the /home/vagrant/shared directory in your virtual 
-machine, and run the test_rvm.sh script with the command "sh test_rvm.sh".  NOTE: This command will take a few 
+machine, and run the test_sq.sh script with the command "sh test_sq.sh".  NOTE: This command will take a few 
 minutes to complete.  At its conclusion, you will see a message ending in "Ctrl-C to shutdown server".  Step 5 
 will not work until this script reaches this point.  (This test script creates the generic Rails app from 
 http://elinux.org/RPi_Ruby_on_Rails .)
