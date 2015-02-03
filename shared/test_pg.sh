@@ -48,7 +48,7 @@ wait
 
 echo "*************************"
 echo "rake db:create db:migrate"
-cd /home/vagrant/shared/school_pg && db:migrate
+cd /home/vagrant/shared/school_pg && rake db:migrate
 wait
 
 echo "**********************"
@@ -57,8 +57,11 @@ echo "GO TO THE FOLLOWING URL:"
 echo "http://localhost:3000/pupils"
 echo "*************************************************************"
 echo "You can use access the database in this app by using pgAdmin."
+echo "Host: localhost"
+echo "Port: 15432"
+echo "Maintenance DB: postgres"
+echo "Username: $APP_DB_USER"
+echo "Password: $APP_DB_PASS"
 echo "Database name: $APP_DB_NAME"
-echo "Database user: $APP_DB_USER"
-echo "Database password: $APP_DB_PASS"
-echo "*******************************"
+echo "***************************"
 cd /home/vagrant/shared/school_pg && rails s -b 0.0.0.0
