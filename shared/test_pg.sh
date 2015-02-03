@@ -5,6 +5,9 @@
 
 # REFERENCE: https://github.com/jackdb/pg-app-dev-vm
 
+# Just making sure Ruby, Rails, and Node are working as expected.
+sh /home/vagrant/shared/info.sh
+
 APP_DB_NAME=database1
 APP_DB_USER=user1
 APP_DB_PASS=password1
