@@ -36,6 +36,8 @@
 !shared
 !shared/info.sh
 !shared/README-host.txt
+!shared/README-postgres.txt
+!shared/test_pg.sh
 !shared/test_sq.sh
 !shared/update_all.sh
 !shared/update_linux.sh
