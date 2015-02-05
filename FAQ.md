@@ -75,4 +75,4 @@ includes Bash scripts that consolidate routine multi-step tasks into one step.
 ### What process do you use to create your Vagrant base boxes?
 
 I use a tool called Packer to create my Vagrant base boxes.  The source code I use for creating my Debian base boxes 
-is publicly available at https://github.com/jhsu802701/packer-debian-wheezy-rvm .
+is publicly available at https://github.com/jhsu802701/packer-debian-wheezy .
