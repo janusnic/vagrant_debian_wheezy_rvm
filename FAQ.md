@@ -60,9 +60,19 @@ practices.
 
 *  Debian Stable is much easier to maintain and keep up-to-date than Ubuntu.  Debian Stable requires only a few 
 occasional and modest updates.  Complying with best practices is NOT an undue burden.
+*  Software provided in my Debian Stable Vagrant box includes:
+
+  1.  RVM, Ruby, and Rails
+  2.  NVM and node.js
+  3.  Puppet
+  4.  Chef
+  5.  Redis server
+  6.  SQLite3
+  7.  PostgreSQL
 *  As an added bonus, my Vagrant repository on GitHub (https://github.com/jhsu802701/vagrant_debian_wheezy_rvm) 
 includes Bash scripts that consolidate routine multi-step tasks into one step.
 
-What process do you use to create your Vagrant base boxes?
+### What process do you use to create your Vagrant base boxes?
+
 I use a tool called Packer to create my Vagrant base boxes.  The source code I use for creating my Debian base boxes 
 is publicly available at https://github.com/jhsu802701/packer-debian-wheezy-rvm .
