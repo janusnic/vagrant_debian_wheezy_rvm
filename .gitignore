@@ -23,7 +23,7 @@
 !.gitignore
 !changelog.txt
 !download_new_base.sh
-!FAQ.txt
+!FAQ.md
 !install_new_box.sh
 !login.sh
 !reboot.sh
