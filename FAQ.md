@@ -23,8 +23,8 @@ not have to spend time troubleshooting the situation and searching the web for s
 
 ### What's wrong with installing Ruby on Rails in VirtualBox but not using Vagrant?
 I used Ruby on Rails in VirtualBox before I learned how to use Vagrant.  While this offered some of the benefits of 
-using Vagrant (such as being cross-platform and offering access to a fresh version of Ruby on Rails), there were 
-drawbacks:
+using Vagrant (such as being cross-platform and offering on-demand access to a fresh version of Ruby on Rails), there 
+were drawbacks:
 
 *  This still required manually installing RVM.
 *  Not having Vagrant meant that I couldn't copy and paste text from the host machine into the virtual machine.
@@ -49,18 +49,20 @@ easily and quickly make sure that your app's gemspec/Gemfile and setup instructi
 
 ### What's wrong with using a Ubuntu base box?
 
-*  Out of date: Most Ubuntu boxes are out-of-date.
+*  Outdated: Most Ubuntu boxes are out-of-date.  Refusing to update your Ubuntu base box means using outdated 
+software, which is a violation of best practices.  
 *  High maintenance: Ubuntu boxes require large, time-consuming, and frequent updates.  This is why Ubuntu boxes are 
 so out of date.  These updates cut into the time available for working on your projects, ESPECIALLY when you boot up 
 the base box in its original state.
-*  Outdated: Refusing to update your Ubuntu base box means using outdated software.  This is a violation of best 
-practices.  
 
 ### Why is your Debian Stable Vagrant box so much better?
 
 *  Debian Stable is much easier to maintain and keep up-to-date than Ubuntu.  Debian Stable requires only a few 
 occasional and modest updates.  Complying with best practices is NOT an undue burden.
-*  Software provided in my Debian Stable Vagrant box includes:
+*  Some Vagrant setups install software through provisioning scripts that run during the "vagrant up" stage.
+In contrast, software is pre-installed in my base box, which saves you time during the "vagrant up" stage, especially 
+the first time you use my base box after downloading or rebuilding it.  Software pre-installed in my Debian Stable 
+Vagrant base box includes:
 
   1.  RVM, Ruby, and Rails
   2.  NVM and node.js
