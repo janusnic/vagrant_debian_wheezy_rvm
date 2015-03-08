@@ -24,6 +24,10 @@ echo "Version of node.js:"
 nvm list
 
 echo
+echo "Heroku Toolbelt:"
+heroku version
+
+echo
 python --version
 
 echo
