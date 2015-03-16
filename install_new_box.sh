@@ -18,9 +18,9 @@ echo "------------------"
 echo "vagrant destroy -f"
 vagrant destroy -f
 
-echo "------------------------------------"
-echo "vagrant box remove debian-wheezy-rvm"
-vagrant box remove debian-wheezy-rvm;
+echo "--------------------------------------------"
+echo "vagrant box remove debian-wheezy-rvm --force"
+vagrant box remove debian-wheezy-rvm --force;
 
 echo "-------------------------------------------------------"
 echo "vagrant box add debian-wheezy-rvm debian-wheezy-rvm.box"
