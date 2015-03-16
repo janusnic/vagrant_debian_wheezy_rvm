@@ -6,6 +6,9 @@ software in the latest Vagrant base box available here will be much more current
 other Vagrant base boxes out there.  Furthermore, keeping this Vagrant base box updated will be MUCH easier than 
 keeping most of the other publicly available Vagrant base boxes updated.
 
+## YouTube Demo
+Go to http://www.youtube.com/playlist?list=PLfd4iay29eVD6yscALNcF220jfW-zUgDe to view video demos of this Vagrant box.
+
 ## What's In The Box
 RVM, Ruby, Rails, NVM, Python, node.js, Git, SQLite, PostgreSQL, Chef, Puppet, Redis
 
@@ -29,30 +32,15 @@ files from the host machine to the guest machine.
 
 ## Getting started
 
-### Step 1 - Install Git (Version Control)
-If your host OS is Debian Linux, Ubuntu Linux, or one of their derivatives, the shell command is "apt-get install 
-git".  If your host OS is OS X or Windows, go to the [Git](http://git-scm.com) web site, click on Downloads, choose 
-the appropriate Operating System specific package to download, and follow the normal procedure for installing 
-software.
+### Step 1 - Install Git, VirtualBox, and Vagrant.
 
-### Step 2 - Install VirtualBox
-Go to the [VirtualBox](https://www.virtualbox.org) web site, click on Downloads, and get the appropriate package for
-your host OS.  If your host OS is Debian Linux, Ubuntu Linux, or a derivative of either distro, cd your way into the 
-directory where your downloaded VirtualBox package is located, and enter the command "dpkg -i virtualbox*deb."  If 
-your host OS is OS X or Windows, follow the normal procedure for installing software.  WARNING: File syncing does 
-not work with certain older versions of VirtualBox (such as 4.1.18) but does work with the newer versions (such as 
-4.3.18 and 4.3.20).  Your Linux distro's normal software repository may have one of those problematic older 
-versions of VirtualBox.
+* Git: If your host OS is Debian Linux, Ubuntu Linux, or one of their derivatives, the shell command is "apt-get install git".  If your host OS is OS X or Windows, go to the [Git](http://git-scm.com) web site, click on Downloads, choose the appropriate Operating System specific package to download, and follow the normal procedure for installing software.
 
-### Step 3 - Install Vagrant
-Go to the [Vagrant](http://vagrantup.com) web site, click on Downloads, and get the appropriate package for your 
-host OS.  If your host OS is Debian Linux, Ubuntu Linux, or a derivative of either distro, cd your way into the 
-directory where your downloaded VirtualBox package is located, and enter the command "dpkg -i vagrant*deb."  If 
-your host OS is OS X or Windows, follow the normal procedure for installing packages.  WARNING: The configuration 
-file in this repository is NOT compatible with Vagrant 1.0.x.  Your Linux distro's normal software repository may 
-have one of those incompatible older versions of Vagrant.
+* VirtualBox: Go to the [VirtualBox](https://www.virtualbox.org) web site, click on Downloads, and get the appropriate package for your host OS.  If your host OS is Debian Linux, Ubuntu Linux, or a derivative of either distro, cd your way into the directory where your downloaded VirtualBox package is located, and enter the command "dpkg -i virtualbox*deb".  If your host OS is OS X or Windows, follow the normal procedure for installing software.  WARNING: File syncing does not work with certain older versions of VirtualBox (such as 4.1.18) but does work with the newer versions (such as 4.3.18 and 4.3.20).  Your Linux distro's normal software repository may have one of those problematic older versions of VirtualBox.
 
-### Step 4 - Build, Boot Up, and Enter The Virtual Machine
+* Vagrant: Go to the [Vagrant](http://vagrantup.com) web site, click on Downloads, and get the appropriate package for your host OS.  If your host OS is Debian Linux, Ubuntu Linux, or a derivative of either distro, cd your way into the directory where your downloaded VirtualBox package is located, and enter the command "dpkg -i vagrant*deb".  If your host OS is OS X or Windows, follow the normal procedure for installing packages.  WARNING: The configuration file in this repository is NOT compatible with Vagrant 1.0.x.  Your Linux distro's normal software repository may have one of those incompatible older versions of Vagrant.
+
+### Step 2 - Build, Boot Up, and Enter The Virtual Machine
 
 In the terminal application, enter:
 
@@ -72,17 +60,24 @@ The "vagrant ssh" command logs you into the Vagrant box.  If you are asked to pr
 There should be a README-host.txt file in the /home/vagrant/shared directory, which is the same README-host.txt 
 file in the shared directory in this repository.  The purpose of this file is to confirm that file syncing works.
 
-### Step 5 - Test the RVM Installation
-Using the same SSH connection from Step 3, cd your way into the /home/vagrant/shared directory in your virtual 
-machine, and run the test_sq.sh script with the command "sh test_sq.sh".  NOTE: This command will take a few 
-minutes to complete.  At its conclusion, you will see a message ending in "Ctrl-C to shutdown server".  Step 5 
-will not work until this script reaches this point.  (This test script creates the generic Rails app from 
-http://elinux.org/RPi_Ruby_on_Rails .)
+### Step 3 - View information on the Vagrant box
+Use your SSH connection to cd your way into the /home/vagrant/shared directory in your virtual machine, and run the info.sh script with the command "sh info.sh".  This displays the time stamp of the Vagrant box and the versions of Ruby, Rails, RVM, node.js, NVM, SQLite, PostgreSQL, and other software included in the box.
 
-### Step 6 - View the Test Application
-When the script in Step 4 has finished its work, open your browser on your host machine, and go to 
+### Step 4 - Test the RVM Installation (SQLite)
+
+* Use your SSH connection to cd your way into the /home/vagrant/shared directory in your virtual 
+machine, and run the test_sq.sh script with the command "sh test_sq.sh".  NOTE: This command will take a few 
+minutes to complete.  At its conclusion, you will see a message ending in "Ctrl-C to shutdown server".
+
+* When the test_pg.sh script has finished its work, open your browser on your host machine, and go to 
 [localhost:3000/pupils](http://localhost:3000/pupils).  The School App should appear.
 
+### Step 5 - Test the RVM Installation (PostgreSQL)
+
+* Go to your SSH connection from Step 4, press Ctrl-C to turn off the server from the Rails app in Step 4, cd your way into the /home/vagrant/shared directory, and run the test_pg.sh script with the command "sh test_pg.sh".  NOTE: This command will take a few minutes to complete.  At its conclusion, you will see a message ending in "Ctrl-C to shutdown server".
+
+* When the test_pg.sh script has finished its work, open your browser on your host machine, and go to 
+[localhost:3000/pupils](http://localhost:3000/pupils).  The School App should appear.
 
 ## Virtual Machine Management
 
